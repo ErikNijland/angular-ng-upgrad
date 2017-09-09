@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from "@angular/core";
-import {CountryService} from "../ng1-upgrades/services/country.service";
+import {CountryService} from "../../../ng1-upgrades/services/country.service";
 
 @Component({
   selector: 'ng4-countries',
