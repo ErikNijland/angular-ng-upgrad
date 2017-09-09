@@ -1,12 +1,15 @@
 angular
   .module('ng1App')
   .component('someForm', {
+    bindings: {
+      myName: '='
+    },
     template: `
       <label>
         Name:
-        <input ng-model="name">
+        <input ng-model="$ctrl.myName" size="60">
       </label>
       
-      {{name}}
+      {{$ctrl.myName}}
     `
   });
