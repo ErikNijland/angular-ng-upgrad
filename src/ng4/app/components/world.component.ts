@@ -6,6 +6,8 @@ import {Component} from "@angular/core";
     <p>Angular 4 says: world</p>
 
     <ng4-countries></ng4-countries>
+
+    <some-form></some-form>
   `
 })
 export class WorldComponent {

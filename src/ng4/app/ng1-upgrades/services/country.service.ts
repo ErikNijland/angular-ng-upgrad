@@ -6,8 +6,12 @@ import {InjectionToken} from "@angular/core";
 
 export const CountryService = new InjectionToken('CountryService');
 
+export function createCountryService (injector) {
+  return injector.get('countryService');
+}
+
 export const countryServiceProvider = {
   provide: CountryService,
-  useFactory: (injector) => injector.get('countryService'),
+  useFactory: createCountryService,
   deps: [ '$injector' ]
 };

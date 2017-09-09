@@ -4,8 +4,10 @@ import { downgradeComponent, UpgradeModule } from "@angular/upgrade/static";
 
 import { AppComponent } from './app.component';
 import { WorldComponent } from "./components/world.component";
-import { countryServiceProvider } from "./services/country.service";
 import {CountriesComponent} from "./components/countries.component";
+
+import { countryServiceProvider } from "./ng1-upgrades/services/country.service";
+import {SomeFormComponent} from "./ng1-upgrades/components/some-form.directive";
 
 declare const angular: any;
 
@@ -17,6 +19,7 @@ angular
   declarations: [
     AppComponent,
     CountriesComponent,
+    SomeFormComponent,
     WorldComponent
   ],
   imports: [
