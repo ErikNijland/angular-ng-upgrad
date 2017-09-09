@@ -1,9 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { downgradeComponent, UpgradeModule } from "@angular/upgrade/static";
 
 import { AppComponent } from './app.component';
-import { downgradeComponent, UpgradeModule } from "@angular/upgrade/static";
 import { WorldComponent } from "./components/world.component";
+import { countryServiceProvider } from "./services/country.service";
+import {CountriesComponent} from "./components/countries.component";
 
 declare const angular: any;
 
@@ -14,6 +16,7 @@ angular
 @NgModule({
   declarations: [
     AppComponent,
+    CountriesComponent,
     WorldComponent
   ],
   imports: [
@@ -23,7 +26,9 @@ angular
   entryComponents: [
     WorldComponent
   ],
-  providers: []
+  providers: [
+    countryServiceProvider
+  ]
 })
 export class AppModule {
   constructor(private upgradeModule: UpgradeModule) {}
