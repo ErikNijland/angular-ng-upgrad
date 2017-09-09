@@ -8,24 +8,25 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "ng1",
         "assets",
         "favicon.ico"
       ],
       "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "test.ts",
+      "main": "ng4/main.ts",
+      "polyfills": "ng4/polyfills.ts",
+      "test": "ng4/test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "ng4/styles.css"
       ],
       "scripts": [],
-      "environmentSource": "environments/environment.ts",
+      "environmentSource": "ng4/environments/environment.ts",
       "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
+        "dev": "ng4/environments/environment.ts",
+        "prod": "ng4/environments/environment.prod.ts"
       }
     }
   ],
